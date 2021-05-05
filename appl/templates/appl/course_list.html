@@ -3,5 +3,13 @@
 {% block title %}Список курсов{% endblock %}
 
 {% block content %}
-  {{ oneCourse }}
+  <div class="features">
+    <h1>Список курсов</h1>
+    {% for el in oneCourse %}
+      <div class="alert alert-warning">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
